@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NUTYPE — Creative Studio</title>
+<meta name="description" content="Nutype Creative. Something new is being built. Get in touch at dan@nutype.co.uk.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg-dark:#0d0a10;
+    --magenta:#e8177d;
+    --magenta-deep:#7a1148;
+    --text-light:#f5eef2;
+    --text-dim:#c79bb0;
+    --line:rgba(232,23,125,0.35);
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html,body{
+    min-height:100%;
+    background:var(--bg-dark);
+    color:var(--text-light);
+    font-family:'Space Grotesk', sans-serif;
+    overflow-x:hidden;
+  }
+
+  body{
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .stage{
+    position:relative;
+    min-height:100vh;
+    min-height:100dvh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:6vh 6vw;
+    isolation:isolate;
+    overflow:hidden;
+  }
+
+  .liquid-bg{
+    position:absolute;
+    inset:-15%;
+    z-index:-4;
+    filter:blur(min(9vw, 90px)) saturate(1.15);
+    overflow:hidden;
+  }
+
+  .blob{
+    position:absolute;
+    border-radius:50%;
+    mix-blend-mode:screen;
+    will-change:transform;
+  }
+
+  .blob-1{
+    width:60vw; height:60vw;
+    top:-14%; left:-16%;
+    background:radial-gradient(circle at 50% 50%, var(--magenta) 0%, rgba(232,23,125,0) 70%);
+    opacity:0.75;
+    animation:drift1 24s ease-in-out infinite alternate;
+  }
+
+  .blob-2{
+    width:52vw; height:52vw;
+    bottom:-16%; right:-12%;
+    background:radial-gradient(circle at 50% 50%, var(--magenta-deep) 0%, rgba(122,17,72,0) 72%);
+    opacity:0.8;
+    animation:drift2 30s ease-in-out infinite alternate;
+  }
+
+  .blob-3{
+    width:40vw; height:40vw;
+    top:28%; left:44%;
+    background:radial-gradient(circle at 50% 50%, #ffffff 0%, rgba(255,255,255,0) 70%);
+    opacity:0.14;
+    animation:drift3 20s ease-in-out infinite alternate;
+  }
+
+  .blob-4{
+    width:46vw; height:46vw;
+    top:0%; right:4%;
+    background:radial-gradient(circle at 50% 50%, var(--magenta) 0%, rgba(232,23,125,0) 68%);
+    opacity:0.5;
+    animation:drift4 26s ease-in-out infinite alternate;
+  }
+
+  @keyframes drift1{
+    0%{ transform:translate(0,0) scale(1); }
+    100%{ transform:translate(6vw,8vh) scale(1.15); }
+  }
+  @keyframes drift2{
+    0%{ transform:translate(0,0) scale(1); }
+    100%{ transform:translate(-7vw,-6vh) scale(1.1); }
+  }
+  @keyframes drift3{
+    0%{ transform:translate(0,0) scale(1); }
+    100%{ transform:translate(-5vw,6vh) scale(1.2); }
+  }
+  @keyframes drift4{
+    0%{ transform:translate(0,0) scale(1); }
+    100%{ transform:translate(4vw,-7vh) scale(0.9); }
+  }
+
+  .vignette{
+    position:absolute;
+    inset:0;
+    z-index:-3;
+    background:
+      radial-gradient(ellipse at 50% 42%, rgba(13,10,16,0.05) 0%, rgba(13,10,16,0.35) 55%, rgba(13,10,16,0.75) 100%);
+  }
+
+  .grain{
+    position:absolute;
+    inset:0;
+    z-index:-2;
+    opacity:0.09;
+    mix-blend-mode:overlay;
+    pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+
+  /* HUD corner marks */
+  .hud-corner{
+    position:absolute;
+    width:22px;
+    height:22px;
+    border:1px solid var(--line);
+    opacity:0.7;
+  }
+  .hud-corner.tl{ top:28px; left:28px; border-right:none; border-bottom:none; }
+  .hud-corner.tr{ top:28px; right:28px; border-left:none; border-bottom:none; }
+  .hud-corner.bl{ bottom:28px; left:28px; border-right:none; border-top:none; }
+  .hud-corner.br{ bottom:28px; right:28px; border-left:none; border-top:none; }
+
+  .hud-label{
+    position:absolute;
+    font-family:'JetBrains Mono', monospace;
+    font-size:10px;
+    letter-spacing:0.15em;
+    color:var(--text-dim);
+    opacity:0.6;
+    text-transform:uppercase;
+  }
+  .hud-label.top-left{ top:34px; left:60px; }
+  .hud-label.top-right{ top:34px; right:60px; text-align:right; }
+  .hud-label.bottom-left{ bottom:34px; left:60px; }
+  .hud-label.bottom-right{ bottom:34px; right:60px; text-align:right; }
+
+  .content{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    max-width:840px;
+  }
+
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:clamp(11px,1.4vw,13px);
+    letter-spacing:0.4em;
+    color:var(--magenta);
+    text-transform:uppercase;
+    margin-bottom:22px;
+    opacity:0;
+    animation:fadeUp 0.9s ease-out 0.15s forwards;
+  }
+
+  .eyebrow::before{
+    content:'';
+    display:inline-block;
+    width:6px;
+    height:6px;
+    background:var(--magenta);
+    border-radius:50%;
+    margin-right:10px;
+    box-shadow:0 0 8px 2px var(--magenta);
+    vertical-align:middle;
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+
+  .wordmark{
+    position:relative;
+    width:min(560px, 78vw);
+    line-height:0;
+    filter:drop-shadow(0 0 30px rgba(232,23,125,0.45)) drop-shadow(0 0 80px rgba(232,23,125,0.2));
+    opacity:0;
+    animation:fadeUp 1s ease-out 0.35s forwards;
+  }
+
+  .wordmark .logo-img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+
+  .wordmark .glitch-layer{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:auto;
+    clip-path:inset(0 0 0 0);
+    opacity:0;
+    filter:hue-rotate(140deg) saturate(3);
+    mix-blend-mode:screen;
+  }
+
+  .wordmark:hover .glitch-layer,
+  .wordmark.glitching .glitch-layer{
+    animation:glitchShift 0.5s steps(2,end);
+  }
+
+  .tagline{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:400;
+    font-size:clamp(0.95rem, 1.6vw, 1.15rem);
+    color:var(--text-dim);
+    letter-spacing:0.01em;
+    margin-top:28px;
+    max-width:520px;
+    line-height:1.6;
+    opacity:0;
+    animation:fadeUp 1s ease-out 0.55s forwards;
+  }
+
+  .tagline .cursor{
+    display:inline-block;
+    width:2px;
+    height:1em;
+    background:var(--magenta);
+    vertical-align:text-bottom;
+    margin-left:2px;
+    animation:blink 1s step-end infinite;
+  }
+
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:14px;
+    margin-top:44px;
+    opacity:0;
+    animation:fadeUp 1s ease-out 0.6s forwards;
+  }
+
+  .service-card{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    padding:22px 10px 18px;
+    background:rgba(232,23,125,0.05);
+    border:1px solid var(--line);
+    clip-path:polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    transition:background 0.3s ease, border-color 0.3s ease;
+  }
+
+  .service-card:hover{
+    background:rgba(232,23,125,0.1);
+    border-color:rgba(232,23,125,0.7);
+  }
+
+  .service-icon{
+    width:34px;
+    height:34px;
+    color:var(--text-light);
+  }
+
+  .service-card:nth-child(odd) .service-icon{
+    color:var(--magenta);
+  }
+
+  .service-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    line-height:1.5;
+    text-transform:uppercase;
+    color:var(--text-dim);
+  }
+
+  .key-points{
+    list-style:none;
+    margin-top:32px;
+    padding:26px 30px;
+    max-width:600px;
+    width:100%;
+    background:rgba(6,4,7,0.55);
+    border:1px solid var(--line);
+    backdrop-filter:blur(2px);
+    opacity:0;
+    animation:fadeUp 1s ease-out 0.68s forwards;
+  }
+
+  .key-points li{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.02em;
+    line-height:2.1;
+    text-align:center;
+  }
+
+  .key-points li::before{
+    content:'· ';
+  }
+
+  .key-points .pt-pink{ color:var(--magenta); }
+  .key-points .pt-white{ color:var(--text-light); }
+
+  .cta{
+    margin-top:48px;
+    opacity:0;
+    animation:fadeUp 1s ease-out 0.8s forwards;
+  }
+
+  .enquire-btn{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--text-light);
+    text-decoration:none;
+    padding:16px 34px;
+    border:1px solid rgba(245,238,242,0.35);
+    background:rgba(232,23,125,0.06);
+    backdrop-filter:blur(2px);
+    transition:border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  }
+
+  .enquire-btn::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    border:1px solid var(--magenta);
+    opacity:0;
+    transform:scale(0.94);
+    transition:opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .enquire-btn:hover{
+    background:rgba(232,23,125,0.15);
+    border-color:var(--magenta);
+    box-shadow:0 0 24px rgba(232,23,125,0.35);
+    transform:translateY(-2px);
+  }
+
+  .enquire-btn:hover::before{
+    opacity:1;
+    transform:scale(1);
+  }
+
+  .enquire-btn:active{ transform:translateY(0); }
+
+  .enquire-btn .arrow{
+    transition:transform 0.3s ease;
+  }
+  .enquire-btn:hover .arrow{ transform:translateX(4px); }
+
+  .footer{
+    position:absolute;
+    bottom:34px;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:space-between;
+    padding:0 60px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:10px;
+    letter-spacing:0.15em;
+    color:var(--text-dim);
+    opacity:0.55;
+    text-transform:uppercase;
+  }
+
+  @keyframes fadeUp{
+    from{ opacity:0; transform:translateY(14px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+
+  @keyframes pulse{
+    0%,100%{ opacity:1; }
+    50%{ opacity:0.35; }
+  }
+
+  @keyframes blink{
+    0%,100%{ opacity:1; }
+    50%{ opacity:0; }
+  }
+
+  @keyframes glitchShift{
+    0%{ clip-path:inset(0 0 90% 0); transform:translate(-2px,0); opacity:0.8; }
+    30%{ clip-path:inset(30% 0 40% 0); transform:translate(2px,0); opacity:0.6; }
+    60%{ clip-path:inset(60% 0 10% 0); transform:translate(-1px,0); opacity:0.8; }
+    100%{ clip-path:inset(0 0 100% 0); transform:translate(0,0); opacity:0; }
+  }
+
+  @media (max-width:640px){
+    .hud-corner, .hud-label{ display:none; }
+    .footer{ padding:0 24px; font-size:9px; }
+    .stage{ padding:8vh 6vw; }
+    .enquire-btn{ padding:15px 26px; font-size:12px; }
+    .services-grid{ grid-template-columns:repeat(2, 1fr); gap:10px; }
+    .key-points{ padding:22px 18px; }
+    .key-points li{ font-size:11.5px; line-height:1.9; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="liquid-bg">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-4"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+  <div class="vignette"></div>
+  <div class="grain"></div>
+
+  <div class="hud-corner tl"></div>
+  <div class="hud-corner tr"></div>
+  <div class="hud-corner bl"></div>
+  <div class="hud-corner br"></div>
+
+  <div class="hud-label top-left">Nutype // Creative</div>
+  <div class="hud-label top-right">Status: Building</div>
+  <div class="hud-label bottom-left">Est. 2026</div>
+  <div class="hud-label bottom-right">London, UK</div>
+
+  <div class="content">
+    <div class="eyebrow">Creative Studio</div>
+
+    <h1 class="wordmark" id="wordmark">
+      <img src="assets/logo.png" alt="Nutype" class="logo-img">
+      <img src="assets/logo.png" alt="" class="glitch-layer" aria-hidden="true">
+    </h1>
+
+    <p class="tagline">
+      We're building something new. In the meantime, if you've got a project in mind, get in touch<span class="cursor"></span>
+    </p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34V18a6 6 0 0 1 6-6h4"/><path d="M34 14v16a6 6 0 0 1-6 6h-4"/><rect x="20.5" y="20.5" width="7" height="7" rx="1" fill="currentColor" stroke="none"/></svg>
+        <span class="service-label">Brand<br>Identity</span>
+      </div>
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="5"/><path d="M20 16l14 8-14 8V16z" fill="currentColor" stroke="none"/></svg>
+        <span class="service-label">Motion<br>Graphics</span>
+      </div>
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M30 6L42 18L20 40L8 42L10 30L30 6Z"/><path d="M26 14L34 22"/></svg>
+        <span class="service-label">Graphic<br>Design</span>
+      </div>
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 26v-4a14 14 0 0 1 28 0v4"/><rect x="6" y="24" width="8" height="12" rx="3"/><rect x="34" y="24" width="8" height="12" rx="3"/><path d="M38 36v2a4 4 0 0 1-4 4h-6"/></svg>
+        <span class="service-label">Creative<br>Support</span>
+      </div>
+    </div>
+
+    <ul class="key-points">
+      <li class="pt-pink">Strategic thinking, not just pretty design</li>
+      <li class="pt-white">Agency-quality creative without agency overheads</li>
+      <li class="pt-pink">One person, multiple creative disciplines</li>
+      <li class="pt-white">Over 15 years creating brands and campaigns</li>
+      <li class="pt-pink">Flexible support for businesses and agencies</li>
+    </ul>
+
+    <div class="cta">
+      <a class="enquire-btn" href="mailto:dan@nutype.co.uk?subject=Enquiry%20from%20nutype.co.uk">
+        Enquire
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>© 2026 Nutype</span>
+    <span>dan@nutype.co.uk</span>
+  </div>
+</div>
+
+<script>
+  // occasional ambient glitch pulse on the wordmark
+  const wordmark = document.getElementById('wordmark');
+  function triggerGlitch(){
+    wordmark.classList.add('glitching');
+    setTimeout(()=> wordmark.classList.remove('glitching'), 550);
+    const next = 4000 + Math.random()*5000;
+    setTimeout(triggerGlitch, next);
+  }
+  setTimeout(triggerGlitch, 2200);
+</script>
+
+</body>
+</html>
