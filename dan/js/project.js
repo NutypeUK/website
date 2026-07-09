@@ -55,14 +55,49 @@ async function renderProject() {
   const gallery = document.getElementById("gallery");
   gallery.innerHTML = "";
   (project.images || []).forEach((src, i) => {
-    gallery.appendChild(
-      el(`<img class="${i === 0 ? "full" : ""}" src="${src}" alt="${project.title} — image ${i + 1}" loading="lazy">`)
-    );
+    const img = el(`<img class="${i === 0 ? "full" : ""}" src="${src}" alt="${project.title} — image ${i + 1}" loading="lazy">`);
+    img.addEventListener("click", () => openLightbox(src, img.alt));
+    gallery.appendChild(img);
   });
 
   const footerContact = document.getElementById("footer-contact");
   footerContact.innerHTML = `<a href="mailto:${settings.email}">${settings.email}</a>${settings.phone ? " · " + settings.phone : ""}`;
 }
+
+function openLightbox(src, alt) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  lightboxImg.src = src;
+  lightboxImg.alt = alt || "";
+  lightbox.hidden = false;
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  lightbox.hidden = true;
+  lightboxImg.src = "";
+  document.body.style.overflow = "";
+}
+
+function initLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  const closeBtn = document.getElementById("lightbox-close");
+
+  closeBtn.addEventListener("click", closeLightbox);
+
+  // Clicking the dark background closes it; clicking the image itself does not.
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+  });
+}
+
+initLightbox();
 
 renderProject().catch((err) => {
   console.error(err);
