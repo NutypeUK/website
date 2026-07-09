@@ -1,0 +1,60 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: simple
+media_folder: "dan/images/uploads"
+public_folder: "/dan/images/uploads"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "dan/content/settings.json"
+        label: "Site Settings"
+        name: "settings"
+        fields:
+          - { label: "Site Name / Logo Text", name: "siteName", widget: "string", hint: "Shown as a two-line stacked wordmark, e.g. 'Dan Hall' becomes DAN over HALL." }
+          - { label: "Logo Image (a real logo file — overrides everything below if set)", name: "logoImage", widget: "image", required: false }
+          - { label: "Logo Photo-fill (a photo shown through the text logo — ignored if Logo Image above is set)", name: "logoPhotoMask", widget: "image", required: false }
+          - { label: "Header Banner Image (wide image shown at the top of the homepage, leave blank to hide)", name: "headerBanner", widget: "image", required: false }
+          - { label: "Intro Heading", name: "introHeading", widget: "string" }
+          - { label: "Intro Text", name: "introText", widget: "text" }
+          - { label: "Showreel Heading", name: "showreelHeading", widget: "string", required: false }
+          - { label: "Showreel Video URL (YouTube or Vimeo link)", name: "showreelUrl", widget: "string", required: false, hint: "Paste a normal YouTube or Vimeo link, e.g. https://youtu.be/xxxxxxxxxxx" }
+          - label: "CV / Resume PDF"
+            name: "cvFile"
+            widget: "file"
+            required: false
+            media_folder: "dan/files"
+            public_folder: "/dan/files"
+            hint: "Upload a PDF here to update the CV button on the site. Visitors always download it as 'My CV.pdf' no matter what this file is named."
+          - { label: "Contact Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string", required: false }
+
+  - name: "projects"
+    label: "Projects"
+    files:
+      - file: "dan/content/projects.json"
+        label: "Projects"
+        name: "projects"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}}"
+            hint: "Drag the handle on the left of each project to reorder — that's the order they appear on the homepage. Use 'Add' below to create a new one, or the trash icon to delete."
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "URL Slug (letters, numbers, hyphens only, no spaces)", name: "slug", widget: "string", hint: "Sets the project's URL: yoursite.com/dan/projects/this-slug — must be unique." }
+              - { label: "Category / Client", name: "category", widget: "string", required: false }
+              - { label: "Thumbnail Image", name: "thumbnail", widget: "image" }
+              - { label: "Summary (shown on homepage thumbnail)", name: "summary", widget: "text" }
+              - { label: "Case Study Text", name: "body", widget: "text" }
+              - label: "Gallery Images"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.image}}"
+                hint: "Drag to reorder, 'Add' to add more, trash icon to remove one."
+                field: { label: "Image", name: "image", widget: "image" }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
