@@ -108,10 +108,10 @@ the CMS (`sections.cookieBanner.visible`).
 
 ## 7. Fonts
 
-You asked for Google Sans — it isn't distributed as a public web font, so the site tries it first
-(if a visitor happens to have it installed) and falls back to Inter, which is visually very close
-and loads from Google Fonts. If you'd rather commit to one look for everyone, say the word and
-I'll drop the fallback and just use Inter everywhere.
+The site uses Inter throughout for headings and body text — it loads reliably from Google Fonts
+for every visitor, so there's no fallback chain to worry about. The hand-drawn "Why Nutype"
+section still uses Google Sans Flex and Playpen Sans for its sketch-style labels and captions,
+also loaded from Google Fonts.
 
 ## 8. Local preview
 
