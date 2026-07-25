@@ -1,0 +1,195 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: https://nutype.co.uk
+display_url: https://nutype.co.uk
+logo_url: /assets/logo-dark.png
+
+collections:
+  - name: "settings"
+    label: "Site content"
+    files:
+      - file: "content/content.json"
+        label: "Nutype website content"
+        name: "content"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: object
+            fields:
+              - { label: "Page title", name: "title", widget: string }
+              - { label: "Meta description", name: "description", widget: text }
+              - { label: "Social share image", name: "ogImage", widget: image, required: false }
+
+          - label: "Section visibility"
+            name: "sections"
+            widget: object
+            fields:
+              - label: "Services"
+                name: "services"
+                widget: object
+                fields:
+                  - { label: "Show this section", name: "visible", widget: boolean, default: true }
+              - label: "Why Nutype (intro + video)"
+                name: "whyNutype"
+                widget: object
+                fields:
+                  - { label: "Show this section", name: "visible", widget: boolean, default: true }
+              - label: "Why Nutype (hand-drawn section)"
+                name: "whySketch"
+                widget: object
+                fields:
+                  - { label: "Show this section", name: "visible", widget: boolean, default: true }
+              - label: "Testimonials"
+                name: "testimonials"
+                widget: object
+                fields:
+                  - { label: "Show this section", name: "visible", widget: boolean, default: true }
+              - label: "Our work"
+                name: "work"
+                widget: object
+                fields:
+                  - { label: "Show this section", name: "visible", widget: boolean, default: false }
+              - label: "Client logo ticker"
+                name: "ticker"
+                widget: object
+                fields:
+                  - { label: "Show this section", name: "visible", widget: boolean, default: true }
+              - label: "Contact form"
+                name: "contact"
+                widget: object
+                fields:
+                  - { label: "Show this section", name: "visible", widget: boolean, default: true }
+              - label: "Cookie banner"
+                name: "cookieBanner"
+                widget: object
+                fields:
+                  - { label: "Show this banner", name: "visible", widget: boolean, default: true }
+
+          - label: "Hero banner"
+            name: "hero"
+            widget: object
+            fields:
+              - { label: "Heading line 1", name: "headingLine1", widget: string }
+              - { label: "Heading line 2 (shown in pink)", name: "headingLine2", widget: string }
+              - { label: "Subtext", name: "subtext", widget: text }
+
+          - label: "Services section"
+            name: "services"
+            widget: object
+            fields:
+              - { label: "Eyebrow label", name: "eyebrow", widget: string }
+              - { label: "Heading", name: "heading", widget: string }
+              - { label: "Subtext", name: "subtext", widget: text }
+              - label: "Service cards"
+                name: "items"
+                widget: list
+                summary: "{{title}}"
+                fields:
+                  - { label: "Icon", name: "icon", widget: image }
+                  - { label: "Icon alt text (for SEO/accessibility)", name: "iconAlt", widget: string }
+                  - { label: "Title", name: "title", widget: string }
+                  - { label: "Description", name: "description", widget: text }
+              - { label: "Closing CTA card title (use <br> for a line break)", name: "ctaTitle", widget: string }
+              - { label: "Closing CTA button text", name: "ctaButton", widget: string }
+
+          - label: "Why Nutype (intro + video)"
+            name: "whyNutype"
+            widget: object
+            fields:
+              - { label: "Eyebrow label", name: "eyebrow", widget: string }
+              - { label: "Heading", name: "heading", widget: string }
+              - { label: "Paragraph", name: "paragraph", widget: text }
+              - { label: "Video label", name: "videoLabel", widget: string }
+              - { label: "Video file", name: "video", widget: file }
+              - { label: "Video thumbnail image", name: "videoPoster", widget: image }
+
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: list
+            summary: "{{fields.author}}"
+            fields:
+              - { label: "Quote", name: "quote", widget: text }
+              - { label: "Attribution", name: "author", widget: string }
+
+          - label: "Our work section"
+            name: "work"
+            widget: object
+            fields:
+              - { label: "Eyebrow label", name: "eyebrow", widget: string }
+              - { label: "Heading", name: "heading", widget: string }
+              - { label: "Subtext", name: "subtext", widget: text }
+              - label: "Projects"
+                name: "projects"
+                widget: list
+                summary: "{{title}}"
+                fields:
+                  - { label: "Project title", name: "title", widget: string }
+                  - label: "Photos and videos"
+                    name: "media"
+                    widget: list
+                    summary: "{{fields.type}}"
+                    fields:
+                      - { label: "Type", name: "type", widget: select, options: ["image", "video"], default: "image" }
+                      - { label: "File (photo or video, matching the type above)", name: "src", widget: file }
+                      - { label: "Video thumbnail image (only needed if type is video)", name: "poster", widget: image, required: false }
+                      - { label: "Alt text", name: "alt", widget: string }
+
+          - label: "Client logo ticker"
+            name: "ticker"
+            widget: object
+            fields:
+              - label: "Logos"
+                name: "logos"
+                widget: list
+                fields:
+                  - { label: "Logo image", name: "src", widget: image }
+                  - { label: "Alt text", name: "alt", widget: string }
+
+          - label: "Contact section"
+            name: "contact"
+            widget: object
+            fields:
+              - { label: "Eyebrow label", name: "eyebrow", widget: string }
+              - { label: "Heading", name: "heading", widget: string }
+              - { label: "Subtext", name: "subtext", widget: text }
+              - { label: "Contact email address", name: "email", widget: string }
+
+          - label: "Footer"
+            name: "footer"
+            widget: object
+            fields:
+              - { label: "Phone number (as displayed)", name: "phoneDisplay", widget: string }
+              - { label: "Phone number (digits only, for the tap-to-call link)", name: "phoneHref", widget: string }
+              - { label: "Founder credit line", name: "founderLine", widget: string }
+              - label: "Social links"
+                name: "social"
+                widget: object
+                fields:
+                  - { label: "LinkedIn URL", name: "linkedin", widget: string, required: false }
+                  - { label: "Instagram URL", name: "instagram", widget: string, required: false }
+
+          - label: "Cookie banner"
+            name: "cookieBanner"
+            widget: object
+            fields:
+              - { label: "Message", name: "message", widget: text }
+              - { label: "Button text", name: "buttonText", widget: string }
+
+          - label: "Footer legal pages (Privacy Policy, Terms of Business, etc.)"
+            name: "legalPages"
+            widget: list
+            summary: "{{title}}"
+            hint: "These show as links in the footer and open in a pop-up when clicked. Add as many as you need. Bold, italic, links, quotes and lists all work from the toolbar. For underline, switch the editor to 'Markdown' mode (top right of the box) and wrap text in <u>...</u>."
+            fields:
+              - { label: "Title", name: "title", widget: string }
+              - { label: "Show this link in the footer", name: "visible", widget: boolean, default: true }
+              - label: "Body copy"
+                name: "body"
+                widget: markdown
+                buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+                editor_components: []
