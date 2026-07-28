@@ -56,6 +56,7 @@
   :root{
     --black:#010101;
     --pink:#EA1755;
+    --pink-text:#EE4174;
     --white:#ffffff;
     --gray:#8a8a8a;
     --grey:#8a8a8a;
@@ -84,7 +85,7 @@
     font-size:13px;
     letter-spacing:.28em;
     text-transform:uppercase;
-    color:var(--pink);
+    color:var(--pink-text);
     margin-bottom:14px;
     font-weight:700;
   }
@@ -125,7 +126,7 @@
   }
   #nav-links a:hover::after{width:100%;}
   #nav-links .btn{
-    background:var(--pink);color:var(--white);padding:10px 22px;border-radius:2px;
+    background:var(--pink);color:var(--black);padding:10px 22px;border-radius:2px;
   }
   #nav-links .btn::after{display:none;}
   #nav-links .btn:hover{background:var(--white);color:var(--black);}
@@ -164,7 +165,7 @@
   }
   #hero-shade{
     position:absolute;inset:0;
-    background:linear-gradient(180deg,rgba(1,1,1,.28) 0%,rgba(1,1,1,.12) 40%,rgba(1,1,1,.78) 100%);
+    background:linear-gradient(180deg,rgba(1,1,1,.45) 0%,rgba(1,1,1,.25) 40%,rgba(1,1,1,.88) 100%);
   }
   #hero .wrap{
     position:relative;z-index:2;padding-bottom:9vh;width:100%;will-change:transform,opacity;
@@ -283,7 +284,7 @@
   }
   .service-card.cta .btn-chip{
     font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-    color:var(--pink);background:var(--white);padding:10px 18px;border-radius:3px;
+    color:var(--black);background:var(--white);padding:10px 18px;border-radius:3px;
     display:inline-block;width:fit-content;
   }
   .service-card.cta:hover{transform:translateY(-6px);border-color:var(--white);}
@@ -297,7 +298,7 @@
   .why-copy p{color:rgba(255,255,255,.72);font-size:16.5px;margin-top:18px;}
   .why-video-label{
     font-family:var(--font-head);font-size:12.5px;font-weight:700;letter-spacing:.2em;
-    text-transform:uppercase;color:var(--pink);margin-bottom:14px;
+    text-transform:uppercase;color:var(--pink-text);margin-bottom:14px;
   }
   .why-video{
     position:relative;border-radius:14px;overflow:hidden;
@@ -372,7 +373,7 @@
   .why .box-problem p{ color:var(--grey); }
   .why .box-problem .strike{ text-decoration:line-through; text-decoration-color:var(--grey); text-decoration-thickness:1.5px; }
   .why .box-solution p{ color:var(--white); }
-  .why .hi{ position:relative; color:var(--pink); }
+  .why .hi{ position:relative; color:var(--pink-text); }
   .why .hi svg{ position:absolute; left:-3%; bottom:-0.16em; width:106%; height:0.35em; overflow:visible; }
   .why .arrow-down{ width:24px; height:34px; margin:0 auto 20px; display:block; overflow:visible; }
   .why .side-tag{
@@ -385,18 +386,18 @@
     padding:14px 22px;
   }
   .why .tag-bubble p{
-    font-family:'Playpen Sans',cursive; font-weight:600; color:var(--pink);
+    font-family:'Playpen Sans',cursive; font-weight:600; color:var(--pink-text);
     font-size:16px; line-height:1.3; margin:0; text-align:center;
   }
   .why .tag-arrow{ flex:0 0 auto; width:44px; height:18px; overflow:visible; }
   .why .tag-result{
-    font-family:'Playpen Sans',cursive; font-weight:600; color:var(--pink);
+    font-family:'Playpen Sans',cursive; font-weight:600; color:var(--pink-text);
     font-size:18px; line-height:1.3; margin:0;
   }
   .why .stack-tag{ margin-top:22px; }
   .why .stack-tag .sketch-box{ display:inline-block; margin-bottom:0; }
-  .why .stack-tag p{ font-family:'Playpen Sans',cursive; font-weight:600; font-size:16px; color:var(--pink); line-height:1.5; margin:0; white-space:nowrap; }
-  .why .doodle{ position:absolute; font-family:'Playpen Sans',cursive; font-weight:600; color:var(--pink); font-size:17px; line-height:1.3; }
+  .why .stack-tag p{ font-family:'Playpen Sans',cursive; font-weight:600; font-size:16px; color:var(--pink-text); line-height:1.5; margin:0; white-space:nowrap; }
+  .why .doodle{ position:absolute; font-family:'Playpen Sans',cursive; font-weight:600; color:var(--pink-text); font-size:17px; line-height:1.3; }
   .why .doodle-sound{ top:-6px; left:-96px; width:90px; text-align:right; }
   .why .doodle-sound svg{ margin-top:6px; width:60px; height:26px; overflow:visible; }
   .why .doodle-move{ top:8px; right:-128px; width:118px; }
@@ -553,12 +554,12 @@
   #contact .eyebrow{color:var(--black);}
   #contact h2{color:var(--black);}
   .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;}
-  .contact-info p{color:rgba(1,1,1,.72);font-size:16px;margin-top:14px;max-width:360px;}
+  .contact-info p{color:rgba(1,1,1,.85);font-size:16px;margin-top:14px;max-width:360px;}
   .contact-detail{margin-top:34px;}
   .contact-detail a{color:var(--black);font-weight:700;font-size:16px;text-decoration:underline;text-underline-offset:3px;}
   form{display:flex;flex-direction:column;gap:18px;}
   .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-  label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(1,1,1,.65);margin-bottom:8px;display:block;}
+  label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--black);margin-bottom:8px;display:block;}
   input,textarea{
     width:100%;background:var(--dark-card);border:1px solid rgba(1,1,1,.25);
     border-radius:4px;padding:14px 16px;color:var(--white);font-family:var(--font-body);
@@ -574,8 +575,11 @@
   button[type=submit]:hover{background:#1c1c1c;}
   button[type=submit]:disabled{opacity:.6;cursor:default;}
   #form-status{font-size:14px;margin-top:4px;min-height:20px;}
-  #form-status.ok{color:#0f5c2e;}
-  #form-status.err{color:#3a0a0a;}
+  #form-status.ok,#form-status.err{
+    display:inline-block;padding:8px 14px;border-radius:4px;font-weight:600;background:var(--black);
+  }
+  #form-status.ok{color:#4ADE80;}
+  #form-status.err{color:#FF6B6B;}
   @media (max-width:860px){.contact-grid{grid-template-columns:1fr;gap:44px;}.form-row{grid-template-columns:1fr;}}
 
   /* ---------- COOKIE BANNER ---------- */
@@ -591,11 +595,11 @@
   .cookie-banner.hidden{opacity:0;transform:translateY(12px);pointer-events:none;}
   .cookie-banner p{font-size:13px;color:rgba(255,255,255,.75);margin:0;flex:1 1 220px;line-height:1.5;}
   .cookie-accept-btn{
-    flex:0 0 auto;background:var(--pink);color:var(--white);border:0;
+    flex:0 0 auto;background:var(--pink);color:var(--black);border:0;
     padding:10px 18px;font-weight:700;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;
     border-radius:4px;cursor:pointer;transition:background .2s ease;
   }
-  .cookie-accept-btn:hover{background:#c8134a;}
+  .cookie-accept-btn:hover{background:var(--pink-text);}
 
   /* ---------- FOOTER ---------- */
   footer{padding:40px 0;border-top:1px solid rgba(255,255,255,.08);}
@@ -604,14 +608,14 @@
   footer small{color:var(--gray);font-size:12.5px;}
   .footer-mid{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
   .footer-phone{color:var(--gray);font-size:13px;font-weight:600;transition:color .2s ease;}
-  .footer-phone:hover{color:var(--pink);}
+  .footer-phone:hover{color:var(--pink-text);}
   .footer-social{display:flex;gap:10px;}
   .footer-social a{
     width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.15);
     display:flex;align-items:center;justify-content:center;color:var(--white);
     transition:border-color .2s ease,color .2s ease;
   }
-  .footer-social a:hover{border-color:var(--pink);color:var(--pink);}
+  .footer-social a:hover{border-color:var(--pink);color:var(--pink-text);}
   .footer-social svg{width:15px;height:15px;}
   .footer-legal-row{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.06);}
   .footer-legal{display:flex;gap:20px;flex-wrap:wrap;}
@@ -620,7 +624,7 @@
     color:var(--gray);font-size:12.5px;font-weight:600;font-family:inherit;
     cursor:pointer;transition:color .2s ease;
   }
-  .footer-legal-link:hover{color:var(--pink);}
+  .footer-legal-link:hover{color:var(--pink-text);}
 
   /* ---------- TEXT MODAL (legal / info documents) ---------- */
   .text-modal{
@@ -645,7 +649,7 @@
   }
   .text-modal-body{color:rgba(255,255,255,.75);font-size:14.5px;line-height:1.7;}
   .text-modal-body p{margin:0 0 14px;}
-  .text-modal-body a{color:var(--pink);}
+  .text-modal-body a{color:var(--pink-text);}
   .text-modal-body strong{color:var(--white);}
   .text-modal-body ul,.text-modal-body ol{margin:0 0 14px;padding-left:20px;}
   @media (max-width:600px){
@@ -681,7 +685,7 @@
   <div id="hero-shade"></div>
   <div class="wrap">
     <h1><span id="hero-line1">Your brand</span><br><span id="hero-line2">upgraded</span></h1>
-    <p id="hero-subtext">Nutype Creative is a brand and motion studio built for businesses ready to stand out — identity, campaigns and animation under one roof.</p>
+    <p id="hero-subtext">Nutype Creative is a brand and motion studio built for businesses ready to stand out: identity, campaigns and animation under one roof.</p>
   </div>
   <div class="scroll-cue"><i></i>Scroll</div>
 </section>
@@ -769,10 +773,10 @@
       <div class="why-copy">
         <div class="eyebrow" id="why-eyebrow">Why Nutype</div>
         <h2 id="why-heading">Built different, on purpose</h2>
-        <p id="why-paragraph">Nutype exists for brands that refuse to blend in. We pair sharp strategic thinking with hands-on craft — every identity, campaign and animation is built in-house, shaped around what actually moves your audience rather than what's trending this week. No templates, no bloated process — just work that looks like it was made for you, because it was.</p>
+        <p id="why-paragraph">Nutype exists for brands that refuse to blend in. We pair sharp strategic thinking with hands-on craft: every identity, campaign and animation is built in-house, shaped around what actually moves your audience rather than what's trending this week. No templates, no bloated process. Just work that looks like it was made for you, because it was.</p>
       </div>
       <div>
-        <div class="why-video-label" id="why-video-label">Watch — Nutype in 60 seconds</div>
+        <div class="why-video-label" id="why-video-label">Watch: Nutype in 60 seconds</div>
         <div class="why-video">
           <video id="promo-video" controls preload="metadata" poster="assets/promo-poster.jpg">
             <source id="promo-video-source" src="assets/nutype-promo-web.mp4" type="video/mp4">
@@ -788,6 +792,8 @@
     </div>
   </div>
 </section>
+
+<div class="tape"><div class="tape-track"></div></div>
 
 <section class="why" id="why">
   <div class="inner">
@@ -863,23 +869,25 @@
   </div>
 </section>
 
+<div class="tape"><div class="tape-track"></div></div>
+
 <section id="testimonial">
   <div class="wrap">
     <div class="testimonial-slider" id="testimonial-slider">
       <div class="testimonial-slide">
         <div class="mark">&ldquo;</div>
-        <blockquote>Nutype completely transformed how our brand shows up — sharper, louder, and finally consistent everywhere it counts.</blockquote>
-        <cite>Placeholder quote — swap in a real client testimonial</cite>
+        <blockquote>Nutype completely transformed how our brand shows up: sharper, louder, and finally consistent everywhere it counts.</blockquote>
+        <cite>Placeholder quote: swap in a real client testimonial</cite>
       </div>
       <div class="testimonial-slide">
         <div class="mark">&ldquo;</div>
-        <blockquote>The campaign work landed exactly how we hoped — sharp concept, fast turnaround, zero hand-holding needed.</blockquote>
-        <cite>Placeholder quote — swap in a real client testimonial</cite>
+        <blockquote>The campaign work landed exactly how we hoped: sharp concept, fast turnaround, zero hand-holding needed.</blockquote>
+        <cite>Placeholder quote: swap in a real client testimonial</cite>
       </div>
       <div class="testimonial-slide">
         <div class="mark">&ldquo;</div>
         <blockquote>Nutype's motion work gave our product launch a completely different energy online.</blockquote>
-        <cite>Placeholder quote — swap in a real client testimonial</cite>
+        <cite>Placeholder quote: swap in a real client testimonial</cite>
       </div>
     </div>
   </div>
@@ -985,12 +993,12 @@
         </a>
       </div>
     </div>
-    <small id="footer-founder-line">&copy; <span id="year"></span> Nutype Creative. All rights reserved. Founded by Daniel Luke Hall — Northampton, UK.</small>
+    <small id="footer-founder-line">&copy; <span id="year"></span> Nutype Creative. All rights reserved. Founded by Daniel Luke Hall, Northampton, UK.</small>
   </div>
   <div class="wrap footer-legal-row">
     <div class="footer-legal" id="footer-legal-links">
-      <button type="button" class="footer-legal-link" data-title="Privacy Policy" data-body="This page is coming soon — check back shortly, or [get in touch](#contact) if you have any questions about how we handle your data.">Privacy Policy</button>
-      <button type="button" class="footer-legal-link" data-title="Terms of Business" data-body="This page is coming soon — check back shortly, or [get in touch](#contact) if you have any questions about how we work.">Terms of Business</button>
+      <button type="button" class="footer-legal-link" data-title="Privacy Policy" data-body="This page is coming soon. Check back shortly, or [get in touch](#contact) if you have any questions about how we handle your data.">Privacy Policy</button>
+      <button type="button" class="footer-legal-link" data-title="Terms of Business" data-body="This page is coming soon. Check back shortly, or [get in touch](#contact) if you have any questions about how we work.">Terms of Business</button>
     </div>
   </div>
 </footer>
@@ -1100,7 +1108,7 @@
     promoVideo.addEventListener('pause', function(){ playOverlay.classList.remove('hidden'); });
   }
 
-  /* ---------- CONTACT FORM — Netlify Forms ----------
+  /* ---------- CONTACT FORM (Netlify Forms) ----------
      No signup, no API key. Netlify auto-detects this form (data-netlify="true")
      the moment the site deploys, and submissions appear in the Netlify
      dashboard under Site settings > Forms. Turn on an email notification
@@ -1119,7 +1127,7 @@
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: body
     }).then(function(){
-      status.textContent = "Thanks — your enquiry's on its way to us.";
+      status.textContent = "Thanks! Your enquiry's on its way to us.";
       status.className = 'ok';
       form.reset();
     }).catch(function(){
@@ -1144,7 +1152,7 @@
   })();
 
   /* ---------- Legal / info document modal (Privacy Policy, Terms of Business, etc.) ----------
-     Works with whatever buttons are in #footer-legal-links at any given moment — the static
+     Works with whatever buttons are in #footer-legal-links at any given moment: the static
      "coming soon" ones baked into the HTML, or a CMS-driven rebuilt set once content.json loads. */
   var openLegalModal, closeLegalModal, wireLegalLinks;
   (function initLegalModal(){
@@ -1195,8 +1203,8 @@
      CMS-DRIVEN CONTENT
      Everything below fetches content/content.json (edited via the /admin CMS)
      and overlays it onto the static defaults already baked into this HTML.
-     If the fetch fails — e.g. the page is opened directly as a local file,
-     where fetch() of local JSON is blocked by the browser — the page still
+     If the fetch fails (e.g. the page is opened directly as a local file,
+     where fetch() of local JSON is blocked by the browser), the page still
      shows the defaults above, so nothing ever renders blank.
      ========================================================================== */
   var SECTION_SELECTORS = {
@@ -1356,7 +1364,7 @@
       btn.type = 'button';
       btn.className = 'footer-legal-link';
       btn.setAttribute('data-title', page.title);
-      btn.setAttribute('data-body', page.body || 'This page is coming soon — check back shortly.');
+      btn.setAttribute('data-body', page.body || 'This page is coming soon. Check back shortly.');
       btn.textContent = page.title;
       container.appendChild(btn);
     });
