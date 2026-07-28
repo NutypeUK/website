@@ -17,7 +17,7 @@
   "hero": {
     "headingLine1": "Your brand",
     "headingLine2": "upgraded",
-    "subtext": "Nutype Creative is a brand and motion studio built for businesses ready to stand out — identity, campaigns and animation under one roof."
+    "subtext": "Nutype Creative is a brand and motion studio built for businesses ready to stand out: identity, campaigns and animation under one roof."
   },
   "services": {
     "eyebrow": "Services",
@@ -41,15 +41,15 @@
   "whyNutype": {
     "eyebrow": "Why Nutype",
     "heading": "Built different, on purpose",
-    "paragraph": "Nutype exists for brands that refuse to blend in. We pair sharp strategic thinking with hands-on craft — every identity, campaign and animation is built in-house, shaped around what actually moves your audience rather than what's trending this week. No templates, no bloated process — just work that looks like it was made for you, because it was.",
-    "videoLabel": "Watch — Nutype in 60 seconds",
+    "paragraph": "Nutype exists for brands that refuse to blend in. We pair sharp strategic thinking with hands-on craft: every identity, campaign and animation is built in-house, shaped around what actually moves your audience rather than what's trending this week. No templates, no bloated process. Just work that looks like it was made for you, because it was.",
+    "videoLabel": "Watch: Nutype in 60 seconds",
     "video": "assets/nutype-promo-web.mp4",
     "videoPoster": "assets/promo-poster.jpg"
   },
   "testimonials": [
-    { "quote": "Nutype completely transformed how our brand shows up — sharper, louder, and finally consistent everywhere it counts.", "author": "Placeholder quote — swap in a real client testimonial" },
-    { "quote": "The campaign work landed exactly how we hoped — sharp concept, fast turnaround, zero hand-holding needed.", "author": "Placeholder quote — swap in a real client testimonial" },
-    { "quote": "Nutype's motion work gave our product launch a completely different energy online.", "author": "Placeholder quote — swap in a real client testimonial" }
+    { "quote": "Nutype completely transformed how our brand shows up: sharper, louder, and finally consistent everywhere it counts.", "author": "Placeholder quote: swap in a real client testimonial" },
+    { "quote": "The campaign work landed exactly how we hoped: sharp concept, fast turnaround, zero hand-holding needed.", "author": "Placeholder quote: swap in a real client testimonial" },
+    { "quote": "Nutype's motion work gave our product launch a completely different energy online.", "author": "Placeholder quote: swap in a real client testimonial" }
   ],
   "work": {
     "eyebrow": "Our work",
@@ -57,28 +57,28 @@
     "subtext": "A look at recent brand, campaign and motion work.",
     "projects": [
       { "title": "Placeholder project one", "media": [
-        { "type": "image", "src": "assets/work/work-1.jpg", "alt": "Placeholder project one — photo 1" },
-        { "type": "image", "src": "assets/work/work-2.jpg", "alt": "Placeholder project one — photo 2" }
+        { "type": "image", "src": "assets/work/work-1.jpg", "alt": "Placeholder project one, photo 1" },
+        { "type": "image", "src": "assets/work/work-2.jpg", "alt": "Placeholder project one, photo 2" }
       ]},
       { "title": "Placeholder project two", "media": [
-        { "type": "image", "src": "assets/work/work-2.jpg", "alt": "Placeholder project two — photo 1" },
-        { "type": "image", "src": "assets/work/work-3-web.jpg", "alt": "Placeholder project two — photo 2" }
+        { "type": "image", "src": "assets/work/work-2.jpg", "alt": "Placeholder project two, photo 1" },
+        { "type": "image", "src": "assets/work/work-3-web.jpg", "alt": "Placeholder project two, photo 2" }
       ]},
       { "title": "Placeholder project three", "media": [
-        { "type": "image", "src": "assets/work/work-3-web.jpg", "alt": "Placeholder project three — photo 1" },
-        { "type": "video", "src": "assets/nutype-promo-web.mp4", "poster": "assets/promo-poster.jpg", "alt": "Placeholder project three — video" }
+        { "type": "image", "src": "assets/work/work-3-web.jpg", "alt": "Placeholder project three, photo 1" },
+        { "type": "video", "src": "assets/nutype-promo-web.mp4", "poster": "assets/promo-poster.jpg", "alt": "Placeholder project three, video" }
       ]},
       { "title": "Placeholder project four", "media": [
-        { "type": "image", "src": "assets/work/work-1.jpg", "alt": "Placeholder project four — photo 1" },
-        { "type": "image", "src": "assets/work/work-3-web.jpg", "alt": "Placeholder project four — photo 2" }
+        { "type": "image", "src": "assets/work/work-1.jpg", "alt": "Placeholder project four, photo 1" },
+        { "type": "image", "src": "assets/work/work-3-web.jpg", "alt": "Placeholder project four, photo 2" }
       ]},
       { "title": "Placeholder project five", "media": [
-        { "type": "image", "src": "assets/work/work-2.jpg", "alt": "Placeholder project five — photo 1" },
-        { "type": "image", "src": "assets/work/work-1.jpg", "alt": "Placeholder project five — photo 2" }
+        { "type": "image", "src": "assets/work/work-2.jpg", "alt": "Placeholder project five, photo 1" },
+        { "type": "image", "src": "assets/work/work-1.jpg", "alt": "Placeholder project five, photo 2" }
       ]},
       { "title": "Placeholder project six", "media": [
-        { "type": "image", "src": "assets/work/work-3-web.jpg", "alt": "Placeholder project six — photo 1" },
-        { "type": "image", "src": "assets/work/work-2.jpg", "alt": "Placeholder project six — photo 2" }
+        { "type": "image", "src": "assets/work/work-3-web.jpg", "alt": "Placeholder project six, photo 1" },
+        { "type": "image", "src": "assets/work/work-2.jpg", "alt": "Placeholder project six, photo 2" }
       ]}
     ]
   },
@@ -97,7 +97,7 @@
   "footer": {
     "phoneDisplay": "07766 477213",
     "phoneHref": "07766477213",
-    "founderLine": "Founded by Daniel Luke Hall — Northampton, UK",
+    "founderLine": "Founded by Daniel Luke Hall, Northampton, UK",
     "social": {
       "linkedin": "",
       "instagram": ""
@@ -111,12 +111,12 @@
     {
       "title": "Privacy Policy",
       "visible": true,
-      "body": "This page is coming soon — check back shortly, or [get in touch](#contact) if you have any questions about how we handle your data."
+      "body": "This page is coming soon. Check back shortly, or [get in touch](#contact) if you have any questions about how we handle your data."
     },
     {
       "title": "Terms of Business",
       "visible": true,
-      "body": "This page is coming soon — check back shortly, or [get in touch](#contact) if you have any questions about how we work."
+      "body": "This page is coming soon. Check back shortly, or [get in touch](#contact) if you have any questions about how we work."
     }
   ]
 }
