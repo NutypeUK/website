@@ -16,12 +16,36 @@
   "ticker": {
     "logos": [
       {
-        "src": "assets/logo-mark-07.png",
-        "alt": "Client logo"
+        "src": "/assets/uploads/logos-05.png",
+        "alt": "Panel Gallery"
       },
       {
-        "src": "assets/logo-mark-08.png",
-        "alt": "Client logo"
+        "src": "/assets/uploads/logos-03.png",
+        "alt": "Little Lions"
+      },
+      {
+        "src": "/assets/uploads/logos-02.png",
+        "alt": "Lightman Photography"
+      },
+      {
+        "src": "/assets/uploads/square-thumbnail-copy.png",
+        "alt": "Little Swamp"
+      },
+      {
+        "src": "/assets/uploads/logos-04.png",
+        "alt": "Little Birdy"
+      },
+      {
+        "src": "/assets/uploads/logos_single-colour-black.png",
+        "alt": "Comic Monkey"
+      },
+      {
+        "src": "/assets/uploads/master-logo_on-black.png",
+        "alt": "TBC"
+      },
+      {
+        "src": "/assets/uploads/logos-01.png",
+        "alt": "Mum.Wife.Work.Life"
       }
     ]
   },
