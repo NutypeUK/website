@@ -1,111 +1,29 @@
 {
-  "seo": {
-    "title": "Nutype Creative | Brand, Campaign & Motion Design Studio in Northampton",
-    "description": "Nutype Creative is a Northampton-based brand identity, campaign and motion graphics studio founded by Daniel Luke Hall. Brand systems, advertising campaigns and animation, built in-house.",
-    "ogImage": "assets/hero.png"
-  },
-  "sections": {
-    "services": { "visible": true },
-    "whyNutype": { "visible": true },
-    "whySketch": { "visible": true },
-    "testimonials": { "visible": true },
-    "work": { "visible": false },
-    "ticker": { "visible": true },
-    "contact": { "visible": true },
-    "cookieBanner": { "visible": true }
-  },
-  "hero": {
-    "headingLine1": "Your brand",
-    "headingLine2": "upgraded",
-    "subtext": "Nutype Creative is a brand and motion studio built for businesses ready to stand out: identity, campaigns and animation under one roof."
-  },
-  "services": {
-    "eyebrow": "Services",
-    "heading": "What we do",
-    "subtext": "Everything a brand needs to look sharp and move with purpose.",
-    "items": [
-      { "icon": "assets/icons/Branding.svg", "iconAlt": "Brand identity icon", "title": "Brand identity", "description": "Logo systems, guidelines and full visual identities built to scale." },
-      { "icon": "assets/icons/Advertising.svg", "iconAlt": "Campaigns icon", "title": "Campaigns", "description": "Marketing campaigns with one confident voice across every channel." },
-      { "icon": "assets/icons/Animation.svg", "iconAlt": "Motion graphics icon", "title": "Motion graphics", "description": "Animated content that gives static brands a pulse." },
-      { "icon": "assets/icons/Logos.svg", "iconAlt": "Logo design icon", "title": "Logo design", "description": "Standalone marks built to work at any size, anywhere." },
-      { "icon": "assets/icons/Video.svg", "iconAlt": "Video production icon", "title": "Video production", "description": "In-house video editing for all your needs." },
-      { "icon": "assets/icons/Digital.svg", "iconAlt": "Digital design icon", "title": "Digital design", "description": "Web, app and digital assets designed to convert." },
-      { "icon": "assets/icons/Print.svg", "iconAlt": "Print design icon", "title": "Print design", "description": "Brochures, packaging and print collateral, done properly." },
-      { "icon": "assets/icons/Socials.svg", "iconAlt": "Social content icon", "title": "Social content", "description": "Scroll-stopping content built for every platform." },
-      { "icon": "assets/icons/Presentations.svg", "iconAlt": "Presentations icon", "title": "Presentations", "description": "Pitch decks and presentations that actually get read." },
-      { "icon": "assets/icons/Events.svg", "iconAlt": "Events icon", "title": "Events", "description": "Branding and collateral for launches, stands and events." }
-    ],
-    "ctaTitle": "Can't see a service listed?<br>Why not contact us.",
-    "ctaButton": "Get in touch"
+  "contact": {
+    "eyebrow": "Contact",
+    "heading": "Let's talk",
+    "subtext": "Tell me a bit about your project. I read every enquiry myself and I'll get back to you within a couple of working days.",
+    "email": "dan@nutype.co.uk"
   },
   "whyNutype": {
     "eyebrow": "Why Nutype",
-    "heading": "Built different, on purpose",
-    "paragraph": "Nutype exists for brands that refuse to blend in. We pair sharp strategic thinking with hands-on craft: every identity, campaign and animation is built in-house, shaped around what actually moves your audience rather than what's trending this week. No templates, no bloated process. Just work that looks like it was made for you, because it was.",
+    "heading": "Built by design",
+    "paragraph": "I'm Dan, and I've spent over fifteen years in branding, advertising and motion design before starting Nutype. That means every project gets senior-level thinking and hands-on craft, not a junior handed a brief and a template from a project manager.\n\nI work best with businesses that have a genuinely good story to tell but aren't landing it: logistics firms, law and accountancy practices, charities, and specialist retailers like toy and games shops. If that sounds like you, we'll probably get on well.\n\nNo bloated process, no handing your project between five different people. Branding, campaigns and motion, all under one roof, built around what actually works for your audience rather than what's trending this week.",
     "videoLabel": "Watch: Nutype in 60 seconds",
     "video": "assets/nutype-promo-web.mp4",
     "videoPoster": "assets/promo-poster.jpg"
   },
-  "testimonials": [
-    { "quote": "Nutype completely transformed how our brand shows up: sharper, louder, and finally consistent everywhere it counts.", "author": "Placeholder quote: swap in a real client testimonial" },
-    { "quote": "The campaign work landed exactly how we hoped: sharp concept, fast turnaround, zero hand-holding needed.", "author": "Placeholder quote: swap in a real client testimonial" },
-    { "quote": "Nutype's motion work gave our product launch a completely different energy online.", "author": "Placeholder quote: swap in a real client testimonial" }
-  ],
-  "work": {
-    "eyebrow": "Our work",
-    "heading": "Selected projects",
-    "subtext": "A look at recent brand, campaign and motion work.",
-    "projects": [
-      { "title": "Placeholder project one", "media": [
-        { "type": "image", "src": "assets/work/work-1.jpg", "alt": "Placeholder project one, photo 1" },
-        { "type": "image", "src": "assets/work/work-2.jpg", "alt": "Placeholder project one, photo 2" }
-      ]},
-      { "title": "Placeholder project two", "media": [
-        { "type": "image", "src": "assets/work/work-2.jpg", "alt": "Placeholder project two, photo 1" },
-        { "type": "image", "src": "assets/work/work-3-web.jpg", "alt": "Placeholder project two, photo 2" }
-      ]},
-      { "title": "Placeholder project three", "media": [
-        { "type": "image", "src": "assets/work/work-3-web.jpg", "alt": "Placeholder project three, photo 1" },
-        { "type": "video", "src": "assets/nutype-promo-web.mp4", "poster": "assets/promo-poster.jpg", "alt": "Placeholder project three, video" }
-      ]},
-      { "title": "Placeholder project four", "media": [
-        { "type": "image", "src": "assets/work/work-1.jpg", "alt": "Placeholder project four, photo 1" },
-        { "type": "image", "src": "assets/work/work-3-web.jpg", "alt": "Placeholder project four, photo 2" }
-      ]},
-      { "title": "Placeholder project five", "media": [
-        { "type": "image", "src": "assets/work/work-2.jpg", "alt": "Placeholder project five, photo 1" },
-        { "type": "image", "src": "assets/work/work-1.jpg", "alt": "Placeholder project five, photo 2" }
-      ]},
-      { "title": "Placeholder project six", "media": [
-        { "type": "image", "src": "assets/work/work-3-web.jpg", "alt": "Placeholder project six, photo 1" },
-        { "type": "image", "src": "assets/work/work-2.jpg", "alt": "Placeholder project six, photo 2" }
-      ]}
-    ]
-  },
   "ticker": {
     "logos": [
-      { "src": "assets/logo-mark-07.png", "alt": "Client logo" },
-      { "src": "assets/logo-mark-08.png", "alt": "Client logo" }
+      {
+        "src": "assets/logo-mark-07.png",
+        "alt": "Client logo"
+      },
+      {
+        "src": "assets/logo-mark-08.png",
+        "alt": "Client logo"
+      }
     ]
-  },
-  "contact": {
-    "eyebrow": "Contact",
-    "heading": "Let's talk",
-    "subtext": "Tell us a bit about the project and we'll get back to you within a couple of working days.",
-    "email": "dan@nutype.co.uk"
-  },
-  "footer": {
-    "phoneDisplay": "07766 477213",
-    "phoneHref": "07766477213",
-    "founderLine": "Founded by Daniel Luke Hall, Northampton, UK",
-    "social": {
-      "linkedin": "",
-      "instagram": ""
-    }
-  },
-  "cookieBanner": {
-    "message": "We use essential cookies to make this site work. We don't use any tracking or analytics cookies.",
-    "buttonText": "Got it"
   },
   "legalPages": [
     {
@@ -118,5 +36,235 @@
       "visible": true,
       "body": "This page is coming soon. Check back shortly, or [get in touch](#contact) if you have any questions about how we work."
     }
-  ]
+  ],
+  "sections": {
+    "services": {
+      "visible": true
+    },
+    "whyNutype": {
+      "visible": true
+    },
+    "whySketch": {
+      "visible": true
+    },
+    "testimonials": {
+      "visible": true
+    },
+    "work": {
+      "visible": false
+    },
+    "ticker": {
+      "visible": true
+    },
+    "contact": {
+      "visible": true
+    },
+    "cookieBanner": {
+      "visible": true
+    }
+  },
+  "cookieBanner": {
+    "message": "We use essential cookies to make this site work. We don't use any tracking or analytics cookies.",
+    "buttonText": "Got it"
+  },
+  "work": {
+    "eyebrow": "Our work",
+    "heading": "Selected projects",
+    "subtext": "A look at recent brand, campaign and motion work.",
+    "projects": [
+      {
+        "title": "Placeholder project one",
+        "media": [
+          {
+            "type": "image",
+            "src": "assets/work/work-1.jpg",
+            "alt": "Placeholder project one, photo 1"
+          },
+          {
+            "type": "image",
+            "src": "assets/work/work-2.jpg",
+            "alt": "Placeholder project one, photo 2"
+          }
+        ]
+      },
+      {
+        "title": "Placeholder project two",
+        "media": [
+          {
+            "type": "image",
+            "src": "assets/work/work-2.jpg",
+            "alt": "Placeholder project two, photo 1"
+          },
+          {
+            "type": "image",
+            "src": "assets/work/work-3-web.jpg",
+            "alt": "Placeholder project two, photo 2"
+          }
+        ]
+      },
+      {
+        "title": "Placeholder project three",
+        "media": [
+          {
+            "type": "image",
+            "src": "assets/work/work-3-web.jpg",
+            "alt": "Placeholder project three, photo 1"
+          },
+          {
+            "type": "video",
+            "src": "assets/nutype-promo-web.mp4",
+            "poster": "assets/promo-poster.jpg",
+            "alt": "Placeholder project three, video"
+          }
+        ]
+      },
+      {
+        "title": "Placeholder project four",
+        "media": [
+          {
+            "type": "image",
+            "src": "assets/work/work-1.jpg",
+            "alt": "Placeholder project four, photo 1"
+          },
+          {
+            "type": "image",
+            "src": "assets/work/work-3-web.jpg",
+            "alt": "Placeholder project four, photo 2"
+          }
+        ]
+      },
+      {
+        "title": "Placeholder project five",
+        "media": [
+          {
+            "type": "image",
+            "src": "assets/work/work-2.jpg",
+            "alt": "Placeholder project five, photo 1"
+          },
+          {
+            "type": "image",
+            "src": "assets/work/work-1.jpg",
+            "alt": "Placeholder project five, photo 2"
+          }
+        ]
+      },
+      {
+        "title": "Placeholder project six",
+        "media": [
+          {
+            "type": "image",
+            "src": "assets/work/work-3-web.jpg",
+            "alt": "Placeholder project six, photo 1"
+          },
+          {
+            "type": "image",
+            "src": "assets/work/work-2.jpg",
+            "alt": "Placeholder project six, photo 2"
+          }
+        ]
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Nutype completely transformed how our brand shows up: sharper, louder, and finally consistent everywhere it counts.",
+      "author": "-"
+    },
+    {
+      "quote": "The campaign work landed exactly how we hoped: sharp concept, fast turnaround, zero hand-holding needed.",
+      "author": "-"
+    },
+    {
+      "quote": "Nutype's motion work gave our product launch a completely different energy online.",
+      "author": "-"
+    }
+  ],
+  "hero": {
+    "headingLine1": "Your brand",
+    "headingLine2": "upgraded",
+    "subtext": "Nutype Creative is where branding and motion design come together under one roof. Fifteen years experience in turning complicated messages into something clear, for businesses across Northamptonshire and Milton Keynes. "
+  },
+  "footer": {
+    "phoneDisplay": "07766 477213",
+    "phoneHref": "07766477213",
+    "founderLine": "Founded by Daniel Luke Hall, Northampton, UK",
+    "social": {
+      "linkedin": "",
+      "instagram": ""
+    }
+  },
+  "seo": {
+    "title": "Nutype Creative | Brand, Campaign & Motion Design Studio in Northampton & Milton Keynes",
+    "description": "Nutype Creative is a Northampton and Milton Keynes brand identity, campaign and motion graphics studio founded by Daniel Luke Hall. Branding, advertising and animation for logistics, law, accountancy and specialist retail businesses, built in-house.",
+    "ogImage": "assets/hero.png"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "heading": "What we do",
+    "subtext": "Everything a brand needs to look sharp and move with purpose, from strategy through to the finished animation, all handled in one pair of hands so nothing gets lost along the way.",
+    "items": [
+      {
+        "icon": "assets/icons/Branding.svg",
+        "iconAlt": "Brand identity icon",
+        "title": "Brand identity",
+        "description": "Logo systems, guidelines and full visual identities built to scale."
+      },
+      {
+        "icon": "assets/icons/Advertising.svg",
+        "iconAlt": "Campaigns icon",
+        "title": "Campaigns",
+        "description": "Marketing campaigns with one confident voice across every channel."
+      },
+      {
+        "icon": "assets/icons/Animation.svg",
+        "iconAlt": "Motion graphics icon",
+        "title": "Motion graphics",
+        "description": "Animated content that gives static brands a pulse."
+      },
+      {
+        "icon": "assets/icons/Logos.svg",
+        "iconAlt": "Logo design icon",
+        "title": "Logo design",
+        "description": "Standalone marks built to work at any size, anywhere."
+      },
+      {
+        "icon": "assets/icons/Video.svg",
+        "iconAlt": "Video production icon",
+        "title": "Video production",
+        "description": "In-house video editing for all your needs."
+      },
+      {
+        "icon": "assets/icons/Digital.svg",
+        "iconAlt": "Digital design icon",
+        "title": "Digital design",
+        "description": "Web, app and digital assets designed to convert."
+      },
+      {
+        "icon": "assets/icons/Print.svg",
+        "iconAlt": "Print design icon",
+        "title": "Print design",
+        "description": "Brochures, packaging and print collateral, done properly."
+      },
+      {
+        "icon": "assets/icons/Socials.svg",
+        "iconAlt": "Social content icon",
+        "title": "Social content",
+        "description": "Scroll-stopping content built for every platform."
+      },
+      {
+        "icon": "assets/icons/Presentations.svg",
+        "iconAlt": "Presentations icon",
+        "title": "Presentations",
+        "description": "Pitch decks and presentations that actually get read."
+      },
+      {
+        "icon": "assets/icons/Events.svg",
+        "iconAlt": "Events icon",
+        "title": "Events",
+        "description": "Branding and collateral for launches, stands and events."
+      }
+    ],
+    "ctaTitle": "Can't see a service listed?<br>Why not contact us.",
+    "ctaButton": "Get in touch"
+  }
 }
