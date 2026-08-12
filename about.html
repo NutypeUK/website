@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title id="page-title">Nutype Creative | Brand, Campaign &amp; Motion Design Studio in Northampton</title>
-<meta id="meta-description" name="description" content="Nutype Creative is a Northampton-based brand identity, campaign and motion graphics studio founded by Daniel Luke Hall. Brand systems, advertising campaigns and animation, built in-house.">
+<title>About | Nutype Creative</title>
+<meta name="description" content="Meet Dan, the designer behind Nutype Creative: a Northampton-based brand identity, campaign and motion graphics studio.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#010101">
 <meta name="author" content="Daniel Luke Hall">
-<link rel="canonical" href="https://nutype.co.uk/">
+<link rel="canonical" href="https://nutype.co.uk/about.html">
 
 <meta property="og:type" content="website">
-<meta id="og-title" property="og:title" content="Nutype Creative | Brand, Campaign &amp; Motion Design Studio in Northampton">
-<meta id="og-description" property="og:description" content="Northampton-based brand identity, campaign and motion graphics studio founded by Daniel Luke Hall.">
-<meta property="og:url" content="https://nutype.co.uk/">
+<meta id="og-title" property="og:title" content="About | Nutype Creative">
+<meta id="og-description" property="og:description" content="Meet Dan, the designer behind Nutype Creative.">
+<meta property="og:url" content="https://nutype.co.uk/about.html">
 <meta property="og:site_name" content="Nutype Creative">
-<meta id="og-image" property="og:image" content="https://nutype.co.uk/assets/hero.png">
+<meta id="og-image" property="og:image" content="https://nutype.co.uk/assets/dan-portrait.jpg">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta id="twitter-title" name="twitter:title" content="Nutype Creative | Brand, Campaign &amp; Motion Design Studio in Northampton">
-<meta id="twitter-description" name="twitter:description" content="Northampton-based brand identity, campaign and motion graphics studio founded by Daniel Luke Hall.">
-<meta id="twitter-image" name="twitter:image" content="https://nutype.co.uk/assets/hero.png">
+<meta id="twitter-title" name="twitter:title" content="About | Nutype Creative">
+<meta id="twitter-description" name="twitter:description" content="Meet Dan, the designer behind Nutype Creative.">
+<meta id="twitter-image" name="twitter:image" content="https://nutype.co.uk/assets/dan-portrait.jpg">
 
 <link rel="icon" href="assets/logo-mark-07.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -235,6 +235,44 @@
   }
   .scroll-cue i{width:1px;height:34px;background:rgba(255,255,255,.4);}
   @keyframes bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,8px);}}
+
+  /* ---------- ABOUT PAGE ---------- */
+  #about-hero{
+    padding:150px 0 100px;
+    background:radial-gradient(120% 90% at 100% 0%, rgba(234,23,85,.12), transparent 60%),
+               radial-gradient(90% 70% at 0% 100%, rgba(234,23,85,.06), transparent 55%),
+               var(--black);
+  }
+  #about-hero .eyebrow{margin-bottom:18px;}
+  #about-hero h1{
+    font-family:var(--font-head);font-weight:900;text-transform:uppercase;
+    font-size:clamp(44px,8vw,110px);line-height:.96;letter-spacing:.005em;
+    margin-bottom:56px;
+  }
+  #about-hero h1 span{color:var(--pink);}
+  .about-row{display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:start;}
+  .about-photo img{width:100%;border-radius:4px;display:block;}
+  .about-tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;}
+  .about-tag{
+    background:var(--dark-card);border:1px solid rgba(255,255,255,.14);
+    color:var(--white);font-size:12px;font-weight:700;letter-spacing:.05em;
+    text-transform:uppercase;padding:8px 16px;border-radius:30px;
+  }
+  .about-headline{
+    font-family:var(--font-head);font-weight:800;font-size:clamp(26px,3.2vw,38px);
+    line-height:1.3;margin-bottom:30px;color:var(--white);
+  }
+  .about-headline em{color:var(--pink);font-style:normal;}
+  .about-text p{color:rgba(255,255,255,.75);font-size:16px;line-height:1.75;margin-bottom:20px;}
+  .about-meta{margin-top:36px;padding-top:26px;border-top:1px solid rgba(255,255,255,.08);}
+  .about-meta p{color:var(--gray);font-size:13.5px;margin-bottom:8px;}
+  .about-meta a{color:var(--pink-text);font-weight:600;}
+  .about-meta a:hover{text-decoration:underline;}
+  @media (max-width:860px){
+    #about-hero{padding:120px 0 70px;}
+    .about-row{grid-template-columns:1fr;gap:40px;}
+    .about-photo{order:-1;max-width:260px;}
+  }
 
   /* ---------- TAPE DIVIDER ---------- */
   .tape{
@@ -693,12 +731,12 @@
 
 <nav id="nav">
   <div class="wrap">
-    <a href="#hero" class="logo"><img src="assets/logo-dark.png" alt="Nutype Creative logo"></a>
+    <a href="index.html" class="logo"><img src="assets/logo-dark.png" alt="Nutype Creative logo"></a>
     <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
     <ul id="nav-links">
-      <li><a href="#services" class="nav-link">Services</a></li>
-      <li><a href="#why-nutype" class="nav-link">Why Nutype</a></li>
-      <li class="section-hidden"><a href="#work" class="nav-link work-nav-link">Our Work</a></li>
+      <li><a href="index.html#services" class="nav-link">Services</a></li>
+      <li><a href="index.html#why-nutype" class="nav-link">Why Nutype</a></li>
+      <li class="section-hidden"><a href="index.html#work" class="nav-link work-nav-link">Our Work</a></li>
       <li><a href="about.html" class="nav-link">About</a></li>
       <li><a href="#contact" class="nav-link btn">Contact</a></li>
     </ul>
@@ -707,245 +745,37 @@
 
 <main>
 
-<section id="hero">
-  <div id="hero-bg"></div>
-  <video id="hero-video-landscape" class="hero-video-el landscape" autoplay muted loop playsinline preload="auto" poster="assets/hero.png">
-    <source src="assets/hero-landscape-web.mp4" type="video/mp4">
-  </video>
-  <video id="hero-video-portrait" class="hero-video-el portrait" autoplay muted loop playsinline preload="none" poster="assets/hero.png">
-    <source src="assets/hero-portrait-web.mp4" type="video/mp4">
-  </video>
-  <div id="hero-shade"></div>
+<section id="about-hero">
   <div class="wrap">
-    <h1><span id="hero-line1">Your brand</span><br><span id="hero-line2">upgraded</span></h1>
-    <p id="hero-subtext">Nutype Creative is a brand and motion studio built for businesses ready to stand out: identity, campaigns and animation under one roof.</p>
-  </div>
-  <div class="scroll-cue"><i></i>Scroll</div>
-</section>
-
-<div class="tape"><div class="tape-track"></div></div>
-
-<section id="services">
-  <div class="wrap">
-    <div class="services-head-row">
-      <div class="services-head">
-        <div class="eyebrow" id="services-eyebrow">Services</div>
-        <h2 id="services-heading">What we do</h2>
-        <p id="services-subtext">Everything a brand needs to look sharp and move with purpose.</p>
+    <div class="eyebrow">About</div>
+    <h1>Your<br><span>pilot</span></h1>
+    <div class="about-row">
+      <div class="about-photo">
+        <img src="assets/dan-portrait.jpg" alt="Dan Hall, founder of Nutype Creative">
       </div>
-      <div class="carousel-arrows">
-        <button id="car-prev" aria-label="Scroll left">&#8592;</button>
-        <button id="car-next" aria-label="Scroll right">&#8594;</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="carousel-shell">
-    <div class="carousel-track" id="service-track">
-      <div class="service-card">
-        <img src="assets/icons/Branding.svg" alt="Brand identity icon">
-        <h3>Brand identity</h3>
-        <p>Logo systems, guidelines and full visual identities built to scale.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/Advertising.svg" alt="Campaigns icon">
-        <h3>Campaigns</h3>
-        <p>Marketing campaigns with one confident voice across every channel.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/Animation.svg" alt="Motion graphics icon">
-        <h3>Motion graphics</h3>
-        <p>Animated content that gives static brands a pulse.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/Logos.svg" alt="Logo design icon">
-        <h3>Logo design</h3>
-        <p>Standalone marks built to work at any size, anywhere.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/Video.svg" alt="Video production icon">
-        <h3>Video production</h3>
-        <p>In-house video editing for all your needs.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/Digital.svg" alt="Digital design icon">
-        <h3>Digital design</h3>
-        <p>Web, app and digital assets designed to convert.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/Print.svg" alt="Print design icon">
-        <h3>Print design</h3>
-        <p>Brochures, packaging and print collateral, done properly.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/Socials.svg" alt="Social content icon">
-        <h3>Social content</h3>
-        <p>Scroll-stopping content built for every platform.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/Presentations.svg" alt="Presentations icon">
-        <h3>Presentations</h3>
-        <p>Pitch decks and presentations that actually get read.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/Events.svg" alt="Events icon">
-        <h3>Events</h3>
-        <p>Branding and collateral for launches, stands and events.</p>
-      </div>
-      <a href="#contact" class="service-card cta">
-        <h3>Can't see a service listed?<br>Why not contact us.</h3>
-        <span class="btn-chip">Get in touch</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="why-nutype">
-  <div class="wrap">
-    <div class="why-grid">
-      <div class="why-copy">
-        <div class="eyebrow" id="why-eyebrow">Why Nutype</div>
-        <h2 id="why-heading">Built different, on purpose</h2>
-        <p id="why-paragraph">Nutype exists for brands that refuse to blend in. We pair sharp strategic thinking with hands-on craft: every identity, campaign and animation is built in-house, shaped around what actually moves your audience rather than what's trending this week. No templates, no bloated process. Just work that looks like it was made for you, because it was.</p>
-      </div>
-      <div>
-        <div class="why-video-label" id="why-video-label">Watch: Nutype in 60 seconds</div>
-        <div class="why-video">
-          <video id="promo-video" controls preload="metadata" poster="assets/promo-poster.jpg">
-            <source id="promo-video-source" src="assets/nutype-promo-web.mp4" type="video/mp4">
-            Your browser doesn't support embedded video.
-          </video>
-          <div class="play-overlay" id="play-overlay">
-            <div class="play-btn">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-          </div>
+      <div class="about-text">
+        <p class="about-headline">I make complicated things <em>look simple</em>.</p>
+        <div class="about-tags">
+          <span class="about-tag">15+ years</span>
+          <span class="about-tag">Branding</span>
+          <span class="about-tag">Advertising</span>
+          <span class="about-tag">Illustration</span>
+          <span class="about-tag">Motion</span>
+        </div>
+        <p>I'm Dan, the designer behind Nutype Creative. Fifteen years in and I still get the same buzz from a blank artboard as I did on day one. That time has been spent across branding, advertising, illustration and motion, which means I'm rarely the person who can only take a job so far. I think it through, then I build it.</p>
+        <p>I'm nosey about how businesses work. Give me a sector I don't know yet, whether that's freight routes, case management or the margins on a tabletop games shop, and I'll go and learn it. Not to show off, just because you can't make something simple until you understand it, and making things simple is the job. The businesses I meet usually aren't unclear because they have nothing to say. They're unclear because they have too much.</p>
+        <p>Nutype exists because I do do it all. The identity, the campaign and the thirty second explainer all come out of the same head, sound like the same brand, and land with you as tidy, organised files you can genuinely own.</p>
+        <p>Outside of work I'm usually painting miniatures at a scale that tests anyone's patience, drawing with my two boys, or being soundly beaten at a playstation game by my partner Paula. Same instinct as the day job, really. Sit down with something fiddly and keep going until it looks right.</p>
+        <div class="about-meta">
+          <p>Based in Northampton</p>
+          <p>Working with clients across the UK and remotely</p>
+          <p>Get in touch: <a href="mailto:dan@nutype.co.uk">dan@nutype.co.uk</a></p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="tape"><div class="tape-track"></div></div>
-
-<section class="why" id="why">
-  <div class="inner">
-    <div class="grid">
-      <div class="col">
-        <p class="col-label"><span class="no">01</span>Branding</p>
-        <svg class="col-underline" viewBox="0 0 64 6" preserveAspectRatio="none"><path class="draw" d="M2,3 C 18,5 46,1 62,3" fill="none" stroke="var(--pink)" stroke-width="2.6" stroke-linecap="round"/></svg>
-        <p class="tag-label">The problem</p>
-        <div class="sketch-box box-problem"><p><span class="strike">Your brand gets lost</span> in the noise.</p></div>
-        <svg class="arrow-down" viewBox="0 0 24 34"><path class="draw" d="M12,2 L12,26 M12,26 L5,19 M12,26 L19,19" fill="none" stroke="var(--pink)" stroke-width="2.6" stroke-linecap="round"/></svg>
-        <p class="tag-label">The solution</p>
-        <div class="sketch-box box-solution" style="position:relative;">
-          <p>A brand that's clear, distinct and
-            <span class="hi">memorable.<svg viewBox="0 0 100 14" preserveAspectRatio="none"><path class="draw" d="M2,8 C 20,13 45,2 65,9 S 88,12 98,6" fill="none" stroke="var(--pink)" stroke-width="2.8" stroke-linecap="round"/></svg></span>
-          </p>
-        </div>
-        <div class="side-tag">
-          <div class="tag-bubble"><p>Strategy<br>Identity<br>Guidelines</p></div>
-          <svg class="tag-arrow" viewBox="0 0 44 18"><path class="draw" d="M2,10 C 16,14 28,6 40,9" fill="none" stroke="var(--pink)" stroke-width="2.4" stroke-linecap="round"/><path class="draw" d="M40,9 L 32,6 M40,9 L 34,14" fill="none" stroke="var(--pink)" stroke-width="2.4" stroke-linecap="round"/></svg>
-          <p class="tag-result">Strong foundations,<br>built to last.</p>
-        </div>
-      </div>
-      <div class="col">
-        <p class="col-label"><span class="no">02</span>Advertising</p>
-        <svg class="col-underline" viewBox="0 0 64 6" preserveAspectRatio="none"><path class="draw" d="M2,3 C 18,5 46,1 62,3" fill="none" stroke="var(--pink)" stroke-width="2.6" stroke-linecap="round"/></svg>
-        <p class="tag-label">The problem</p>
-        <div class="sketch-box box-problem"><p><span class="strike">Your ads don't</span> cut through.</p></div>
-        <svg class="arrow-down" viewBox="0 0 24 34"><path class="draw" d="M12,2 L12,26 M12,26 L5,19 M12,26 L19,19" fill="none" stroke="var(--pink)" stroke-width="2.6" stroke-linecap="round"/></svg>
-        <p class="tag-label">The solution</p>
-        <div class="sketch-box box-solution">
-          <p>Campaigns that grab attention and
-            <span class="hi">drive results.<svg viewBox="0 0 100 14" preserveAspectRatio="none"><path class="draw" d="M2,8 C 20,13 45,2 65,9 S 88,12 98,6" fill="none" stroke="var(--pink)" stroke-width="2.8" stroke-linecap="round"/></svg></span>
-          </p>
-        </div>
-        <div class="stack-tag">
-          <div class="sketch-box" style="border-radius:14px 4px 14px 4px/4px 14px 4px 14px; transform:rotate(-0.5deg);">
-            <p>Idea . Execution . Impact .</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <p class="col-label"><span class="no">03</span>Motion Graphics</p>
-        <svg class="col-underline" viewBox="0 0 64 6" preserveAspectRatio="none"><path class="draw" d="M2,3 C 18,5 46,1 62,3" fill="none" stroke="var(--pink)" stroke-width="2.6" stroke-linecap="round"/></svg>
-        <p class="tag-label">The problem</p>
-        <div class="sketch-box box-problem"><p><span class="strike">Your message is</span> complicated.</p></div>
-        <svg class="arrow-down" viewBox="0 0 24 34"><path class="draw" d="M12,2 L12,26 M12,26 L5,19 M12,26 L19,19" fill="none" stroke="var(--pink)" stroke-width="2.6" stroke-linecap="round"/></svg>
-        <p class="tag-label">The solution</p>
-        <div class="sketch-box box-solution" style="position:relative;">
-          <p>Motion that tells your story and
-            <span class="hi">sticks.<svg viewBox="0 0 60 14" preserveAspectRatio="none"><path class="draw" d="M2,8 C 14,13 30,2 45,9 S 55,12 58,6" fill="none" stroke="var(--pink)" stroke-width="2.8" stroke-linecap="round"/></svg></span>
-          </p>
-        </div>
-        <div class="side-tag">
-          <div class="tag-bubble"><p>Animation<br>Explainers<br>Social content</p></div>
-          <svg class="tag-arrow" viewBox="0 0 44 18"><path class="draw" d="M2,10 C 16,14 28,6 40,9" fill="none" stroke="var(--pink)" stroke-width="2.4" stroke-linecap="round"/><path class="draw" d="M40,9 L 32,6 M40,9 L 34,14" fill="none" stroke="var(--pink)" stroke-width="2.4" stroke-linecap="round"/></svg>
-          <p class="tag-result">Bring ideas<br>to life.</p>
-        </div>
-      </div>
-    </div>
-    <div class="mission-row">
-      <p class="mission-lead">Different disciplines.<br>Same
-        <span class="circled">mission.
-          <svg viewBox="0 0 110 40" preserveAspectRatio="none"><ellipse class="draw" cx="55" cy="20" rx="52" ry="16" fill="none" stroke="var(--pink)" stroke-width="2.6" transform="rotate(-2 55 20)"/></svg>
-        </span>
-      </p>
-      <svg class="mission-arrow" viewBox="0 0 52 20"><path class="draw" d="M2,12 C 18,16 34,6 48,10" fill="none" stroke="var(--pink)" stroke-width="2.6" stroke-linecap="round"/><path class="draw" d="M48,10 L 39,7 M48,10 L 42,16" fill="none" stroke="var(--pink)" stroke-width="2.6" stroke-linecap="round"/></svg>
-      <div class="mission-box">
-        <p class="mission-standout">We help ambitious brands
-          <span class="hi">stand out.<svg viewBox="0 0 110 14" preserveAspectRatio="none"><path class="draw" d="M2,8 C 22,13 50,2 72,9 S 96,12 108,6" fill="none" stroke="var(--pink)" stroke-width="2.8" stroke-linecap="round"/></svg></span>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="tape"><div class="tape-track"></div></div>
-
-<section id="testimonial">
-  <div class="wrap">
-    <div class="testimonial-slider" id="testimonial-slider">
-      <div class="testimonial-slide">
-        <div class="mark">&ldquo;</div>
-        <blockquote>Nutype completely transformed how our brand shows up: sharper, louder, and finally consistent everywhere it counts.</blockquote>
-        <cite>Placeholder quote: swap in a real client testimonial</cite>
-      </div>
-      <div class="testimonial-slide">
-        <div class="mark">&ldquo;</div>
-        <blockquote>The campaign work landed exactly how we hoped: sharp concept, fast turnaround, zero hand-holding needed.</blockquote>
-        <cite>Placeholder quote: swap in a real client testimonial</cite>
-      </div>
-      <div class="testimonial-slide">
-        <div class="mark">&ldquo;</div>
-        <blockquote>Nutype's motion work gave our product launch a completely different energy online.</blockquote>
-        <cite>Placeholder quote: swap in a real client testimonial</cite>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="work" class="section-hidden">
-  <div class="wrap">
-    <div class="services-head" style="margin-bottom:44px;">
-      <div class="eyebrow" id="work-eyebrow">Our work</div>
-      <h2 id="work-heading">Selected projects</h2>
-      <p id="work-subtext">A look at recent brand, campaign and motion work.</p>
-    </div>
-    <div class="work-grid" id="work-grid"></div>
-  </div>
-</section>
-
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
-  <div class="lightbox-title" id="lightbox-title"></div>
-  <div class="lightbox-shell">
-    <button class="lightbox-arrow lightbox-prev" id="lightbox-prev" aria-label="Previous photo">&#8592;</button>
-    <div class="lightbox-track" id="lightbox-track"></div>
-    <button class="lightbox-arrow lightbox-next" id="lightbox-next" aria-label="Next photo">&#8594;</button>
-  </div>
-</div>
 
 <div id="ticker">
   <div class="wrap" style="overflow:hidden;">
