@@ -933,50 +933,54 @@ AI tools and best practice are moving quickly, and I'm currently a one-person st
   });
 
   var heroEl = document.getElementById('hero');
-  var heroBg = document.getElementById('hero-bg');
-  var heroVideos = document.querySelectorAll('.hero-video-el');
-  var heroText = document.querySelector('#hero .wrap');
-  var ticking = false;
+  if(heroEl){
+    var heroBg = document.getElementById('hero-bg');
+    var heroVideos = document.querySelectorAll('.hero-video-el');
+    var heroText = document.querySelector('#hero .wrap');
+    var ticking = false;
 
-  function updateHero(){
-    ticking = false;
-    var heroH = heroEl.offsetHeight;
-    var y = window.scrollY;
-    var progress = Math.min(Math.max(y / heroH, 0), 1);
+    var updateHero = function(){
+      ticking = false;
+      var heroH = heroEl.offsetHeight;
+      var y = window.scrollY;
+      var progress = Math.min(Math.max(y / heroH, 0), 1);
 
-    heroVideos.forEach(function(v){
-      v.style.transform = 'translateY(' + (y * 0.32) + 'px) scale(' + (1 + progress * 0.18) + ')';
-      v.style.opacity = 1 - progress;
-    });
+      heroVideos.forEach(function(v){
+        v.style.transform = 'translateY(' + (y * 0.32) + 'px) scale(' + (1 + progress * 0.18) + ')';
+        v.style.opacity = 1 - progress;
+      });
 
-    heroBg.style.transform = 'translateY(' + (y * 0.15) + 'px) scale(' + (1.08 + progress * 0.12) + ')';
-    heroBg.style.opacity = 0.15 + progress * 0.85;
+      heroBg.style.transform = 'translateY(' + (y * 0.15) + 'px) scale(' + (1.08 + progress * 0.12) + ')';
+      heroBg.style.opacity = 0.15 + progress * 0.85;
 
-    heroText.style.transform = 'translateY(' + (y * -0.25) + 'px)';
-    heroText.style.opacity = 1 - progress * 1.3;
+      heroText.style.transform = 'translateY(' + (y * -0.25) + 'px)';
+      heroText.style.opacity = 1 - progress * 1.3;
 
-    var glitchAmt = Math.min(Math.max((progress - 0.15) / 0.55, 0), 1);
-    heroText.style.setProperty('--glitch', glitchAmt);
-  }
-  function onScroll(){
-    if(!ticking){ window.requestAnimationFrame(updateHero); ticking = true; }
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  updateHero();
+      var glitchAmt = Math.min(Math.max((progress - 0.15) / 0.55, 0), 1);
+      heroText.style.setProperty('--glitch', glitchAmt);
+    };
+    var onScroll = function(){
+      if(!ticking){ window.requestAnimationFrame(updateHero); ticking = true; }
+    };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    updateHero();
 
-  var landscapeVideo = document.getElementById('hero-video-landscape');
-  var portraitVideo = document.getElementById('hero-video-portrait');
-  function syncHeroVideo(){
-    var isPortrait = window.matchMedia('(orientation: portrait)').matches;
-    var active = isPortrait ? portraitVideo : landscapeVideo;
-    if(active.getAttribute('preload') !== 'auto' || active.paused){
-      active.setAttribute('preload','auto');
-      active.load();
-      active.play().catch(function(){});
+    var landscapeVideo = document.getElementById('hero-video-landscape');
+    var portraitVideo = document.getElementById('hero-video-portrait');
+    if(landscapeVideo && portraitVideo){
+      var syncHeroVideo = function(){
+        var isPortrait = window.matchMedia('(orientation: portrait)').matches;
+        var active = isPortrait ? portraitVideo : landscapeVideo;
+        if(active.getAttribute('preload') !== 'auto' || active.paused){
+          active.setAttribute('preload','auto');
+          active.load();
+          active.play().catch(function(){});
+        }
+      };
+      window.addEventListener('resize', syncHeroVideo);
+      syncHeroVideo();
     }
   }
-  window.addEventListener('resize', syncHeroVideo);
-  syncHeroVideo();
 
   var shell = document.querySelector('.carousel-shell');
   var track = document.getElementById('service-track');
