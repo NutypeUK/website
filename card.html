@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dan Hall | Nutype Creative</title>
+<meta name="description" content="Save Dan Hall's contact details, or get in touch via WhatsApp, email, website or LinkedIn.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#010101">
+<link rel="icon" href="assets/logo-mark-07.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#010101;
+    --pink:#EA1755;
+    --pink-text:#EE4174;
+    --white:#ffffff;
+    --gray:#8a8a8a;
+    --dark-card:#0e0e0e;
+    --font:'Inter',-apple-system,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:var(--font);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:32px 18px;
+    line-height:1.5;
+  }
+  .card{
+    width:100%;
+    max-width:400px;
+  }
+  .tape{
+    height:10px;width:100%;overflow:hidden;position:relative;border-radius:4px 4px 0 0;
+  }
+  .tape-track{
+    position:absolute;inset:0;width:200%;
+    background:url('assets/tape-repeat.png') repeat-x;background-size:auto 100%;
+    animation:tape-scroll 14s linear infinite;
+  }
+  @keyframes tape-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .card-body{
+    background:var(--dark-card);
+    border:1px solid rgba(255,255,255,.08);
+    border-top:0;
+    border-radius:0 0 10px 10px;
+    padding:40px 28px 32px;
+    text-align:center;
+  }
+  .avatar{
+    width:96px;height:96px;border-radius:50%;
+    object-fit:cover;margin:0 auto 18px;
+    border:2px solid var(--pink);
+    display:block;
+  }
+  .logo{height:22px;width:auto;margin:0 auto 22px;display:block;}
+  h1{
+    font-size:24px;font-weight:800;letter-spacing:.01em;margin-bottom:4px;
+  }
+  .role{
+    color:var(--pink-text);font-size:13px;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;margin-bottom:26px;
+  }
+  .actions{display:flex;flex-direction:column;gap:12px;}
+  .btn{
+    display:flex;align-items:center;gap:14px;
+    width:100%;padding:14px 18px;border-radius:8px;
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+    color:var(--white);font-family:var(--font);font-size:15px;font-weight:600;
+    text-decoration:none;cursor:pointer;text-align:left;
+    transition:border-color .2s ease,background .2s ease,transform .2s ease;
+  }
+  .btn:hover{border-color:var(--pink);background:rgba(234,23,85,.08);transform:translateY(-1px);}
+  .btn .icon{
+    flex:0 0 auto;width:38px;height:38px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,.06);
+  }
+  .btn .icon svg{width:18px;height:18px;}
+  .btn .label{flex:1;}
+  .btn .label small{display:block;color:var(--gray);font-size:12px;font-weight:500;margin-top:1px;}
+  .btn.primary{
+    background:var(--pink);border-color:var(--pink);
+  }
+  .btn.primary:hover{background:var(--pink-text);border-color:var(--pink-text);}
+  .btn.primary .icon{background:rgba(1,1,1,.18);}
+  .btn.primary .label small{color:rgba(1,1,1,.65);}
+  .footer-note{
+    margin-top:26px;font-size:12px;color:var(--gray);
+  }
+  .footer-note a{color:var(--pink-text);text-decoration:none;}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="tape"><div class="tape-track"></div></div>
+  <div class="card-body">
+    <img class="avatar" src="assets/dan-portrait.jpg" alt="Dan Hall">
+    <img class="logo" src="assets/logo-dark.png" alt="Nutype Creative">
+    <h1>Dan Hall</h1>
+    <div class="role">Founder, Nutype Creative</div>
+
+    <div class="actions">
+      <a class="btn primary" id="save-contact" href="#">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></span>
+        <span class="label">Save to contacts<small>Adds Dan to your phone</small></span>
+      </a>
+
+      <a class="btn" href="https://wa.me/447766477213" target="_blank" rel="noopener">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.83 14.1c-.25.7-1.24 1.28-2.03 1.45-.54.11-1.24.2-3.6-.77-3.02-1.25-4.96-4.32-5.11-4.52-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.6-.37.8-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.07.92 2.22.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.07 1.31 2.37 1.46.3.15.47.12.65-.08.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.08.12.08.72-.17 1.41z"/></svg></span>
+        <span class="label">WhatsApp<small>07766 477213</small></span>
+      </a>
+
+      <a class="btn" href="tel:+447766477213">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg></span>
+        <span class="label">Call<small>07766 477213</small></span>
+      </a>
+
+      <a class="btn" href="mailto:dan@nutype.co.uk">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span>
+        <span class="label">Email<small>dan@nutype.co.uk</small></span>
+      </a>
+
+      <a class="btn" href="https://nutype.co.uk" target="_blank" rel="noopener">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+        <span class="label">Website<small>nutype.co.uk</small></span>
+      </a>
+
+      <a class="btn" href="https://www.linkedin.com/in/daniellukehall1" target="_blank" rel="noopener">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg></span>
+        <span class="label">LinkedIn<small>Connect with Dan</small></span>
+      </a>
+    </div>
+
+    <div class="footer-note">Nutype Creative &middot; <a href="https://nutype.co.uk">nutype.co.uk</a></div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('save-contact').addEventListener('click', function(e){
+    e.preventDefault();
+    var vcard = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      'N:Hall;Daniel;;;',
+      'FN:Dan Hall',
+      'ORG:Nutype Creative',
+      'TITLE:Founder',
+      'TEL;TYPE=CELL:+447766477213',
+      'EMAIL;TYPE=INTERNET:dan@nutype.co.uk',
+      'URL:https://nutype.co.uk',
+      'item1.URL:https://www.linkedin.com/in/daniellukehall1',
+      'item1.X-ABLabel:LinkedIn',
+      'END:VCARD'
+    ].join('\r\n');
+
+    var blob = new Blob([vcard], {type: 'text/vcard;charset=utf-8'});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'dan-hall-nutype.vcf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+  });
+</script>
+
+</body>
+</html>
